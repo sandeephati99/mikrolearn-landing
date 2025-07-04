@@ -105,7 +105,7 @@ export default function ExitIntentPopup({ onSignup }: ExitIntentPopupProps) {
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Gift className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Wait! Get 10% Off + 5 Bonus Cards Free 🎉</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Wait! Get 10% Off + 2 Months Free 🎉</h2>
               <p className="text-gray-600">
                 Don't leave empty-handed — unlock trending insights with exclusive savings.
               </p>

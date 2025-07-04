@@ -37,11 +37,11 @@ export default function ComparisonSection({ onTryDemo, onTryFree }: ComparisonSe
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
                     <Badge className="bg-green-100 text-green-700 mr-2 mt-0.5">✅</Badge>
-                    <span>60-word skill cards, updated 4–6× daily</span>
+                    <span>60-word skill cards, updated daily</span>
                   </li>
                   <li className="flex items-start">
                     <Badge className="bg-green-100 text-green-700 mr-2 mt-0.5">✅</Badge>
-                    <span>15 skill domains: Tech, UX, Agile & more</span>
+                    <span>15 skill domains: Tech, UX & more</span>
                   </li>
                   <li className="flex items-start">
                     <Badge className="bg-green-100 text-green-700 mr-2 mt-0.5">✅</Badge>
@@ -53,7 +53,7 @@ export default function ComparisonSection({ onTryDemo, onTryFree }: ComparisonSe
                   </li>
                   <li className="flex items-start">
                     <Badge className="bg-green-100 text-green-700 mr-2 mt-0.5">✅</Badge>
-                    <span>Contextual ads for relevant tools & events</span>
+                    <span>Contextual ads for tools & events</span>
                   </li>
                 </ul>
               </CardContent>
@@ -138,8 +138,9 @@ export default function ComparisonSection({ onTryDemo, onTryFree }: ComparisonSe
           <Button className="px-8 py-4 text-lg bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white mb-6" onClick={onTryFree || onTryDemo}>
             Try Mikrolearn Free Today
           </Button>
+          <p className="text-sm text-gray-600 pb-4">Or download the app:</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <p className="text-sm text-gray-600">Or download the app:</p>
+            
             <div className="flex gap-3">
               <a
                 href="#"

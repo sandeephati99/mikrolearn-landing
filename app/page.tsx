@@ -69,30 +69,9 @@ export default function LandingPage() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-4" role="navigation" aria-label="Main navigation">
-              <div className="flex items-center space-x-2">
-                <a
-                  href="#"
-                  className="inline-flex items-center bg-black text-white px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-xs"
-                  aria-label="Download on the App Store"
-                >
-                  <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                  </svg>
-                  <span className="text-xs">iOS</span>
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center bg-black text-white px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-xs"
-                  aria-label="Get it on Google Play"
-                >
-                  <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                  </svg>
-                  <span className="text-xs">Android</span>
-                </a>
-              </div>
+
               <Button className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white" onClick={() => setIsSignupOpen(true)}>
-                Try it Free
+                Start Free Trial
               </Button>
             </nav>
 
@@ -115,30 +94,7 @@ export default function LandingPage() {
               className="md:hidden mt-4 pb-4 border-t border-gray-100"
             >
               <nav className="flex flex-col space-y-4 pt-4" role="navigation" aria-label="Mobile navigation">
-                <div className="space-y-3">
-                  <div className="flex gap-2">
-                    <a
-                      href="#"
-                      className="inline-flex items-center bg-black text-white px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-xs flex-1 justify-center"
-                      aria-label="Download on the App Store"
-                    >
-                      <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                      </svg>
-                      <span className="text-xs">iOS</span>
-                    </a>
-                    <a
-                      href="#"
-                      className="inline-flex items-center bg-black text-white px-3 py-2 rounded-lg hover:bg-gray-800 transition-colors text-xs flex-1 justify-center"
-                      aria-label="Get it on Google Play"
-                    >
-                      <svg className="w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                      </svg>
-                      <span className="text-xs">Android</span>
-                    </a>
-                  </div>
-                </div>
+
                 <Button
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white w-full"
                   onClick={() => {
@@ -146,7 +102,7 @@ export default function LandingPage() {
                     setIsMenuOpen(false)
                   }}
                 >
-                  Try it Free
+                  Start Free Trial
                 </Button>
               </nav>
             </motion.div>
@@ -160,7 +116,7 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-[2.25rem]">
-                Be the <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text">Smartest Person</span> in the Room
+                Transform <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text">micro </span>learnings into big <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text"> career leaps</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Stay ahead with AI-curated, bite-sized learning — crafted for forward-thinking professionals like you.
@@ -228,15 +184,15 @@ export default function LandingPage() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="relative h-full flex items-center"
             >
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <div className="relative w-full h-full min-h-[500px] rounded-2xl shadow-2xl overflow-hidden">
                 <Image
                   src="/persona.jpg"
                   alt="Professional using Mikrolearn app for daily skill development and career growth"
                   width={500}
-                  height={600}
-                  className="w-full h-auto object-cover"
+                  height={800}
+                  className="w-full h-full object-cover"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
@@ -401,7 +357,7 @@ export default function LandingPage() {
               What Professionals Say About Mikrolearn
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Join thousands of professionals who are already learning smarter and advancing their careers
+              Join the club of professionals who are already learning smarter and advancing their careers
             </p>
           </motion.div>
 
@@ -464,7 +420,7 @@ export default function LandingPage() {
             className="text-center mt-12 pt-8 border-t border-gray-200"
           >
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Transform Your Learning?</h3>
-            <p className="text-gray-600 mb-6">Join thousands of professionals already learning smarter</p>
+            <p className="text-gray-600 mb-6">Join the club of professionals already learning smarter</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#"
@@ -529,10 +485,8 @@ export default function LandingPage() {
                   </div>
                   <ul className="space-y-4 mb-8 flex-1">
                     {[
-                      "Daily 3 learning cards per category",
-                      "Basic gamification features",
-                      "Community access",
-                      "Mobile app access",
+                      "Limited Access to micro-cards",
+                      "AI-Personalization",
                     ].map((feature) => (
                       <li key={feature} className="flex items-center">
                         <Check className="w-5 h-5 text-teal-500 mr-3" />
@@ -541,19 +495,23 @@ export default function LandingPage() {
                     ))}
                     <li className="flex items-center text-gray-400">
                       <X className="w-5 h-5 mr-3" />
-                      <span>Includes ads</span>
+                      <span>Ad Free experience</span>
                     </li>
                     <li className="flex items-center text-gray-400">
                       <X className="w-5 h-5 mr-3" />
-                      <span>AI-powered personalization</span>
+                      <span>Unlimited Access to content</span>
                     </li>
                     <li className="flex items-center text-gray-400">
                       <X className="w-5 h-5 mr-3" />
-                      <span>Detailed learning analytics</span>
+                      <span>Experience Points system</span>
                     </li>
                     <li className="flex items-center text-gray-400">
                       <X className="w-5 h-5 mr-3" />
-                      <span>Team collaboration tools</span>
+                      <span>Certifications upon completion</span>
+                    </li>
+                    <li className="flex items-center text-gray-400">
+                      <X className="w-5 h-5 mr-3" />
+                      <span>Analytics & Insights</span>
                     </li>
                   </ul>
                   <Button
@@ -573,7 +531,7 @@ export default function LandingPage() {
             >
               <Card className="h-full border-2 border-orange-400 hover:border-orange-500 transition-colors relative overflow-hidden flex flex-col">
                 <div className="absolute top-0 right-0 bg-orange-500 text-white px-4 py-1 text-sm font-medium">
-                  Most Popular
+                  Popular
                 </div>
                 <CardContent className="p-8 flex-1 flex flex-col">
                   <div className="text-center mb-8">
@@ -584,12 +542,11 @@ export default function LandingPage() {
                   </div>
                   <ul className="space-y-4 mb-8 flex-1">
                     {[
-                      "Daily 10 learning cards per category",
-                      "Advanced gamification & streaks",
-                      "Bookmark & save unlimited cards",
-                      "Weekly learning insights",
-                      "Ad-free experience",
-                      "Email digest summaries",
+                      "Unlimited Access to micro-cards",
+                      "AI-Personalization",
+                      "Ad Free experience",
+                      "Unlimited Access to content",
+                      "Experience Points system",
                     ].map((feature) => (
                       <li key={feature} className="flex items-center">
                         <Check className="w-5 h-5 text-orange-500 mr-3" />
@@ -598,12 +555,12 @@ export default function LandingPage() {
                     ))}
                     <li className="flex items-center text-gray-400">
                       <X className="w-5 h-5 mr-3" />
-                      <span>AI-powered personalization</span>
-                    </li>
+                      <span>Certifications upon completion</span>
+                    </li> 
                     <li className="flex items-center text-gray-400">
                       <X className="w-5 h-5 mr-3" />
-                      <span>Team collaboration tools</span>
-                    </li>
+                      <span>Analytics & Insights</span>
+                    </li> 
                   </ul>
                   <Button
                     className="w-full bg-orange-600 hover:bg-orange-700 mt-auto"
@@ -622,7 +579,7 @@ export default function LandingPage() {
             >
               <Card className="h-full border-2 border-indigo-500 relative overflow-hidden flex flex-col">
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-1 text-sm font-medium">
-                  Enterprise
+                  Premium
                 </div>
                 <CardContent className="p-8 flex-1 flex flex-col">
                   <div className="text-center mb-8">
@@ -633,13 +590,13 @@ export default function LandingPage() {
                   </div>
                   <ul className="space-y-4 mb-8 flex-1">
                     {[
-                      "Unlimited access to all learning cards",
-                      "Advanced AI-powered personalization",
-                      "Detailed learning analytics & insights",
-                      "Shareable content bundles",
-                      "Priority customer support",
-                      "Early access to new features",
-                      "Team collaboration tools",
+                      "Unlimited Access to micro-cards",
+                      "AI-Personalization",
+                      "Ad Free experience",
+                      "Unlimited Access to content",
+                      "Experience Points system",
+                      "Certifications upon completion",
+                      "Analytics & Insights",
                     ].map((feature) => (
                       <li key={feature} className="flex items-center">
                         <Check className="w-5 h-5 text-indigo-500 mr-3" />
@@ -791,19 +748,19 @@ export default function LandingPage() {
                 ))}
               </ul>
               <div className="flex space-x-3">
-                <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors" aria-label="LinkedIn">
+                <a href="#" className="text-[#0077B5] hover:opacity-80 transition-opacity" aria-label="LinkedIn">
                   <span className="sr-only">LinkedIn</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors" aria-label="YouTube">
+                <a href="#" className="text-[#FF0000] hover:opacity-80 transition-opacity" aria-label="YouTube">
                   <span className="sr-only">YouTube</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors" aria-label="Instagram">
+                <a href="#" className="text-[#E4405F] hover:opacity-80 transition-opacity" aria-label="Instagram">
                   <span className="sr-only">Instagram</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12.017 0C8.396 0 7.989.016 6.756.072 5.526.127 4.718.302 4.019.57a5.962 5.962 0 0 0-2.153 1.4A5.962 5.962 0 0 0 .466 4.123C.198 4.822.023 5.63-.032 6.86-.088 8.094-.104 8.5-.104 12.121s.016 4.027.072 5.261c.055 1.23.23 2.038.498 2.737a5.962 5.962 0 0 0 1.4 2.153 5.962 5.962 0 0 0 2.154 1.4c.699.268 1.507.443 2.737.498 1.234.056 1.64.072 5.261.072s4.027-.016 5.261-.072c1.23-.055 2.038-.23 2.737-.498a5.962 5.962 0 0 0 2.153-1.4 5.962 5.962 0 0 0 1.4-2.153c.268-.699.443-1.507.498-2.737.056-1.234.072-1.64.072-5.261s-.016-4.027-.072-5.261c-.055-1.23-.23-2.038-.498-2.737a5.962 5.962 0 0 0-1.4-2.153A5.962 5.962 0 0 0 19.778.57C19.079.302 18.271.127 17.041.072 15.807.016 15.401 0 11.78 0h.237zm-.117 2.178c3.556 0 3.97.016 5.37.072 1.295.059 1.998.274 2.467.456.62.24 1.063.528 1.528.992.464.465.752.908.992 1.528.182.469.397 1.172.456 2.467.056 1.4.072 1.814.072 5.37s-.016 3.97-.072 5.37c-.059 1.295-.274 1.998-.456 2.467-.24.62-.528 1.063-.992 1.528-.465.464-.908.752-1.528.992-.469.182-1.172.397-2.467.456-1.4.056-1.814.072-5.37.072s-3.97-.016-5.37-.072c-1.295-.059-1.998-.274-2.467-.456-.62-.24-1.063-.528-1.528-.992-.464-.465-.752-.908-.992-1.528-.182-.469-.397-1.172-.456-2.467-.056-1.4-.072-1.814-.072-5.37s.016-3.97.072-5.37c.059-1.295.274-1.998.456-2.467.24-.62.528-1.063.992-1.528.465-.464.908-.752 1.528-.992.469-.182 1.172-.397 2.467-.456 1.4-.056 1.814-.072 5.37-.072z" />
@@ -811,7 +768,7 @@ export default function LandingPage() {
                     <circle cx="18.406" cy="5.594" r="1.44" />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-indigo-600 transition-colors" aria-label="Facebook">
+                <a href="#" className="text-[#1877F2] hover:opacity-80 transition-opacity" aria-label="Facebook">
                   <span className="sr-only">Facebook</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
