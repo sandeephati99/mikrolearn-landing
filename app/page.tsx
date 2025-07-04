@@ -45,7 +45,8 @@ export default function LandingPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <div className="min-h-screen bg-white">
       {/* Sticky Header */}
       <motion.header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -836,6 +837,7 @@ export default function LandingPage() {
       {/* Exit Intent Popup */}
       <ExitIntentPopup onSignup={() => setIsSignupOpen(true)} />
     </div>
+    </>
   )
 }
 

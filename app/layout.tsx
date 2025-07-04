@@ -85,8 +85,7 @@ export const metadata: Metadata = {
     "mobile-web-app-capable": "yes",
     "msapplication-TileColor": "#4F46E5",
     "theme-color": "#4F46E5",
-  },
-    generator: 'v0.dev'
+  }
 }
 
 export default function RootLayout({
