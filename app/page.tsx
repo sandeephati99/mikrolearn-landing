@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import {
   Brain,
   Trophy,
@@ -21,10 +23,10 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import MikrolearnDemo from "@/components/mikrolearn-demo"
-import ComparisonSection from "@/components/comparison-section"
-import SignupModal from "@/components/signup-modal"
-import ExitIntentPopup from "@/components/exit-intent-popup"
+const MikrolearnDemo = dynamic(() => import("@/components/mikrolearn-demo"))
+const ComparisonSection = dynamic(() => import("@/components/comparison-section"))
+const SignupModal = dynamic(() => import("@/components/signup-modal"))
+const ExitIntentPopup = dynamic(() => import("@/components/exit-intent-popup"))
 
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -54,7 +56,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <motion.div className="flex items-center space-x-3" whileHover={{ scale: 1.05 }}>
-              <img src="/mikrolearn-logo.png" alt="Mikrolearn Logo" className="w-8 h-8" />
+              <Image src="/mikrolearn-logo.png" alt="Mikrolearn Logo" width={32} height={32} />
               <div className="text-2xl font-bold">
                 <h1 className="sr-only">Mikrolearn - AI-Powered Microlearning Platform for Professional Development</h1>
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text">Mikro</span>
@@ -155,8 +157,8 @@ export default function LandingPage() {
       <section className="pt-24 pb-16 px-4" role="banner">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 text-[2.25rem]">
                 Be the <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text">Smartest Person</span> in the Room
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -196,7 +198,7 @@ export default function LandingPage() {
                   <span className="ml-2 text-gray-600">from 1,200+ professionals at Razorpay, Accenture, Meesho</span>
                 </div>
                 <div className="flex items-center space-x-6 text-gray-400">
-                  <span className="text-sm font-medium">Featured in:</span>
+                  <span className="text-sm font-medium text-black">Featured in:</span>
                   <Badge variant="outline">YourStory</Badge>
                   <Badge variant="outline">ProductHunt</Badge>
                   <Badge variant="outline">TechCrunch India</Badge>
@@ -219,7 +221,7 @@ export default function LandingPage() {
                   Watch Demo
                 </Button>
               </div>
-            </motion.div>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -228,11 +230,14 @@ export default function LandingPage() {
               className="relative"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
+                <Image
                   src="/persona.jpg"
                   alt="Professional using Mikrolearn app for daily skill development and career growth"
-                  className="w-full h-[600px] object-cover"
-                  loading="eager"
+                  width={500}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
@@ -372,7 +377,7 @@ export default function LandingPage() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <div className="mb-4 p-4 border-2 border-gray-200 rounded-lg bg-white shadow-md aspect-w-1 aspect-h-1">
-                  <img src={step.image} alt={step.title} className="w-full h-full object-cover rounded-md" />
+                  <Image src={step.image} alt={step.title} width={400} height={400} className="w-full h-full object-cover rounded-md" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
@@ -712,7 +717,7 @@ export default function LandingPage() {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
-                <img src="/mikrolearn-logo.png" alt="Mikrolearn Logo" className="w-8 h-8" />
+                <Image src="/mikrolearn-logo.png" alt="Mikrolearn Logo" width={32} height={32} />
                 <div className="text-2xl font-bold">
                   <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text">Mikro</span>
                   <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
