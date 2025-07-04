@@ -156,9 +156,9 @@ export default function LandingPage() {
                 </div>
                 <div className="flex items-center space-x-6 text-gray-400">
                   <span className="text-sm font-medium text-black">Featured in:</span>
-                  <Badge variant="outline">YourStory</Badge>
-                  <Badge variant="outline">ProductHunt</Badge>
-                  <Badge variant="outline">TechCrunch India</Badge>
+                  <Badge variant="outline" className="bg-green-200">YourStory</Badge>
+                  <Badge variant="outline" className="bg-green-200">ProductHunt</Badge>
+                  <Badge variant="outline" className="bg-green-200">TechCrunch India</Badge>
                 </div>
               </div>
 
@@ -199,10 +199,19 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4">
-                    <p className="text-sm font-medium text-gray-900">
+                    <p className="text-md font-medium text-gray-900">
                       "60 seconds of daily learning transformed my career trajectory"
                     </p>
-                    <p className="text-xs text-gray-600 mt-1">- Senior Product Manager</p>
+                    <div className="flex items-center space-x-2 mt-1">
+                      <span className="text-sm text-gray-600">Shefali Agarwal, Senior Product Manager,</span>
+                      <img 
+                        src="/google-logo-transparent.png" 
+                        alt="Google" 
+                        className="h-4 w-auto object-contain mt-1 -ml-4"
+                        width="82"
+                        height="42"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
