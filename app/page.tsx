@@ -160,8 +160,7 @@ export default function LandingPage() {
                 Be the <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text">Smartest Person</span> in the Room
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Transform your career with AI-powered microlearning. Get personalized, bite-sized knowledge cards
-                curated just for you. Built for busy professionals who want to stay ahead.
+                Stay ahead with AI-curated, bite-sized learning — crafted for forward-thinking professionals like you.
               </p>
 
               {/* Social Proof Quotes */}
@@ -230,7 +229,7 @@ export default function LandingPage() {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="/placeholder.svg?height=600&width=500"
+                  src="/persona.jpg"
                   alt="Professional using Mikrolearn app for daily skill development and career growth"
                   className="w-full h-[600px] object-cover"
                   loading="eager"
@@ -351,62 +350,32 @@ export default function LandingPage() {
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
-            {[
-              {
-                step: "01",
-                title: "Connect LinkedIn & Select Your Professional Skills",
-                description:
-                  "Link your professional profile to get AI-curated content recommendations tailored to your career",
-                color: "indigo",
-              },
-              {
-                step: "02",
-                title: "Receive Daily 60-Second Learning Cards",
-                description: "Get personalized knowledge cards delivered daily, covering trending topics in your field",
-                color: "teal",
-              },
-              {
-                step: "03",
-                title: "Learn, Bookmark, Quiz & Share - Build Your Streak",
-                description:
-                  "Engage with content through interactive features and track your continuous learning progress",
-                color: "lime",
-              },
-              {
-                step: "04",
-                title: "Discover Career Opportunities & Professional Tools",
-                description:
-                  "Explore related resources, attend relevant events, and discover tools to advance your career",
-                color: "indigo",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`flex items-center gap-8 mb-12 ${index % 2 === 1 ? "flex-row-reverse" : ""}`}
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {[{
+              title: "Step 1: Connect Your Profile",
+              description: "Sign in with LinkedIn to personalize your learning experience.",
+              image: "/step-1.png"
+            }, {
+              title: "Step 2: Select Your Skills",
+              description: "Choose the skills you want to develop and track.",
+              image: "/step-2.png"
+            }, {
+              title: "Step 3: Get Your Daily Feed",
+              description: "Receive a personalized feed of bite-sized learning cards every day.",
+              image: "/step-3.png"
+            }].map((step, index) => (
+              <motion.div 
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <div className="flex-1">
-                  <div className={`text-6xl font-bold text-${item.color}-200 mb-2`}>{item.step}</div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{item.title}</h3>
-                  <p className="text-gray-600 text-lg">{item.description}</p>
+                <div className="mb-4 p-4 border-2 border-gray-200 rounded-lg bg-white shadow-md aspect-w-1 aspect-h-1">
+                  <img src={step.image} alt={step.title} className="w-full h-full object-cover rounded-md" />
                 </div>
-                <div className="flex-1">
-                  <div
-                    className={`bg-gradient-to-br from-${item.color}-100 to-${item.color}-200 rounded-2xl p-8 h-64 flex items-center justify-center`}
-                  >
-                    <div className="text-center">
-                      <div
-                        className={`w-16 h-16 bg-${item.color}-500 rounded-full mx-auto mb-4 flex items-center justify-center`}
-                      >
-                        <span className="text-white font-bold text-xl">{item.step}</span>
-                      </div>
-                      <p className="text-gray-700 font-medium">Step {item.step}</p>
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
               </motion.div>
             ))}
           </div>
@@ -847,7 +816,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 text-sm">© 2024 Mikrolearn. All rights reserved.</p>
+            <p className="text-gray-600 text-sm">© 2025 Mikrolearn. All rights reserved.</p>
             <p className="text-gray-600 text-sm flex items-center mt-2 md:mt-0">
               Built in India with <Heart className="w-4 h-4 text-red-500 mx-1" /> by curious minds
             </p>
